@@ -1,0 +1,821 @@
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del header */
+header {
+  background-color: #f8f9fa;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo-circle {
+  margin-top: -10px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: #007BFF;
+  color: white;
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 700;
+  font-family: 'Lora', serif;
+  line-height: 1.3;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s;
+  padding: 10px;
+  font-size: 10px; /* Ajusta el tamaño según lo que necesites */
+}
+
+.logo-text:hover {
+  transform: scale(1.2);
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+
+/* Menú hamburguesa */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  right: 58px;
+  top: 45px;
+  position: absolute;
+  
+}
+
+.menu-icon span {
+  display:  block;
+  width: 30px;
+  height: 4px;
+  margin: 6px 0;
+  background-color: black;
+}
+
+ul, ol {
+  list-style: none; /* Esto elimina los puntos en listas(lo puse para lista de menú hamburgueda) */
+}
+
+/* Hero Section */
+.hero {
+  background-color: #007bff;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+/* Botones CTA */
+.cta-button {
+  background-color: #ffc107;
+  margin-top: 15px;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0a800;
+}
+
+/* Sección de dos columnas */
+
+.two-columns {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que las columnas se apilen */
+  gap: 20px; /* Espaciado entre las columnas */
+  padding: 20px; /* Espaciado interno para toda la sección */
+}
+
+.column {
+  flex: 1 1 50%; /* Asigna igual espacio a ambas columnas */
+  padding: 0px; /* Espaciado interno dentro de cada columna */
+}
+
+.image-container {
+  padding: 10px; /* Espaciado interno para separar la imagen del borde */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: none; /* Opcional: redondea los bordes de la imagen */
+}
+
+p {
+  margin: 0 0 10px; /* Márgenes entre párrafos para mejor legibilidad */
+  line-height: 1.6; /* Espaciado entre líneas del texto */
+}
+
+
+
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+}
+
+.whatsapp-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-button a:hover {
+  transform: scale(1.1);
+  background-color: #1ebd56;
+}
+
+.whatsapp-button img {
+  width: 100%;
+  height: auto;
+}
+
+/* Botones sociales */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+  background-color: #666;
+}
+
+.social-button i {
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-button.facebook i {
+  color: #1877f2;
+}
+
+.social-button.twitter i {
+  color: #1da1f2;
+}
+
+.social-button.instagram i {
+  color: #C13584;
+}
+
+/* Formulario de contacto */
+form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input, 
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin:  auto;
+  
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px
+}
+
+footer h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+  
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .services-section {
+    padding: 120px 20px;}
+  
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 10px 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    text-align: right;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: block;
+    animation: slideDown 5s ease-in-out;
+  }
+
+  .nav-links li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .two-columns {
+    flex-direction: column;
+  }
+
+  .column {
+    max-width: 100%;
+    width: 100%;
+    
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    
+    
+  }
+
+  .footer-column {
+    text-align: center;
+    
+    
+  }
+}
+
+@media (min-width: 2024px) {
+  .whatsapp-button {
+    display: none;
+  }
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 500px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+/* Estilos específicos para dispositivos de escritorio */
+@media (min-width: 900px) {
+  .whatsapp-button {
+    position: fix; /* Permite que el botón se mueva con el contenido */
+    bottom: 650px; /* Ajusta la distancia desde el borde inferior */
+    right: 15px; /* Mantén la distancia desde el lado derecho */ 
+  }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-circle {
+        margin-right: 30px;
+    }
+    .footer-column {
+        margin-left: 30px;
+    }
+}
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.services-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services-section h1 {
+    font-size: 2.5rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de servicios */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h2 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.service-item strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .services-section h1 {
+        font-size: 2rem;
+    }
+
+    .services-section p {
+        font-size: 0.5rem;
+    }
+
+    .service-item h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .services-section p {
+        font-size: 0.9rem;
+    }
+}
+ /* Estilos generales para la sección "Sobre Nosotros" */
+.about-us {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Título */
+.about-us h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenido */
+.about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: justify;
+    gap: 20px;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+}
+
+.about-text strong {
+    color: #0078D7;
+    font-weight: bold;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaptación para pantallas más grandes */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+        font-size: 1.5 rem
+    }
+
+    .about-text {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .about-image {
+        flex: 1;
+    }
+}
+
+/* Estilos generales para la sección "Sobre Nosotros" */
+.about-us {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+/* Título */
+.about-us h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+/* Texto */
+.about-container p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-container strong {
+    color: #0078D7;
+    font-weight: bold;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+    .about-us {
+        padding: 150px 30px;
+    }
+
+    .about-us h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-container p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de dirección */
+#direccion {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#direccion h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.direccion-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.direccion-contenido p {
+    margin: 10px 0;
+}
+
+.direccion-contenido strong {
+    color: #333;
+}
+
+
+
+@media (min-width: 768px) {
+  #direccion {
+    padding: 400px 20px;}
+    
+}
+
+/* Estilos para el mapa */
+.mapa {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* Estilos generales */
+.faq-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0066cc;
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-answer {
+    display: none; /* Ocultar por defecto */
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+    .faq-section {
+        padding: 200px 80px 420px 80px ;
+    }
+
+    .faq-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .faq-item {
+        padding: 20px;
+    }
+
+    .faq-question {
+        font-size: 1.5rem;
+    }
+
+    .faq-answer {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos generales */
+.about-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.about-text strong {
+    color: #0066cc;
+}
+
+/* Estilos responsivos */
+
+
+@media (min-width: 768px) {
+
+  .about-section { padding: 200px 80px 400px 80px;}
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.2rem;
+    }
+}
+
